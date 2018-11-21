@@ -8,13 +8,10 @@
    - ข้อมูลปริมาณน้ำฝน ของประเทศไทยในช่วง พ.ศ. 2524 ถึง 2558
 
 ## Libraries and Modules
-   ----
 
 ## Output
-   ----
 
 ## Result
-   ----
 
 ## Authers
 Sort 'N' Reverse Team
