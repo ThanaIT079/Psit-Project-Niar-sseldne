@@ -14,6 +14,8 @@
 
 
 ## Libraries and Modules
+ - csv
+ - matplotlib.pyplot
 
 ## Output
 
