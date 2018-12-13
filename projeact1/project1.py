@@ -4,7 +4,7 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 
-def polt_all():
+def plot_all():
     """ดึงข้อมูลน้ำฝนและแสดงผลเป็นกราฟ"""
     url = open(r'2524-2558.csv')
     reader = csv.reader(url)
