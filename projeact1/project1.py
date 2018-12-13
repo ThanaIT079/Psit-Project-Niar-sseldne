@@ -1,7 +1,7 @@
 """กราฟข้อมูลน้ำฝน 2524 - 2558"""
 import csv
 import matplotlib.pyplot as plt
-def main():
+def polt_all():
     """ดึงข้อมูลน้ำฝนและแสดงผลเป็นกราฟ"""
     url = open(r'2524-2558.csv')
     reader = csv.reader(url)
@@ -15,4 +15,4 @@ def main():
     plt.text(2558, aver, u'ค่าเฉลี่ยทั้งหมด 1458', fontname='JasmineUPC', fontsize='20')
     plt.show()
 
-main()
+plot_all()
