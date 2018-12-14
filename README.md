@@ -23,7 +23,7 @@
    จากนั้นนำข้อมูลมาเเสดงผลเป็นกราฟโดย `project1.py`
    
 ## Result
-
+- แสดงผลงานวิจัยบนเว็บไซต์ http://www.it.kmitl.ac.th/~it61070082/Niar/index.html
 ## Authers
 Sort 'N' Reverse Team
 - 61070166    นายภูชิต รุ่งระวิ     - [poohcid](https://github.com/poohcid)
