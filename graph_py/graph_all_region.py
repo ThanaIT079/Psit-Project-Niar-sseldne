@@ -1,5 +1,5 @@
 """
-
+กราฟรวมแบ่งตามภูมิภาค
 """
 import csv
 import matplotlib.pyplot as plt
