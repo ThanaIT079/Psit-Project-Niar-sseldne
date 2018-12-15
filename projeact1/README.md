@@ -7,6 +7,7 @@
 ```
     import csv
     import matplotlib.pyplot as plt
+    import numpy as np
 ```
 - module csv ดึงข้อมูลน้ำฝนจากไฟล์ .csv
 - module matplotlib.pyplot สร้างกราฟ
