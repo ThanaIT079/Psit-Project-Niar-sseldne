@@ -10,7 +10,7 @@ def plot_all():
     reader = csv.reader(url)
     x = list(range(2524, 2559))
     y = [int(i[1]) for i in reader]
-    aver = sum(y) / len(y)
+    aver = np.average(y)
     result = [aver for _ in range(len(y))]
     plt.bar(x, y)
     plt.plot(x, result, 'r')
