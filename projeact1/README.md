@@ -83,3 +83,18 @@ def plot_location_all():
 
 `plot_location(0, 'c', u'ข้อมูลน้ำฝนของภาคเหนือตั้งแต่ปี 2548 - 2558')`
 ![24f761eb4131573afede6bc40fb08078.png](https://www.img.in.th/images/24f761eb4131573afede6bc40fb08078.png)
+
+`plot_location(1, 'green', u'ข้อมูลน้ำฝนของภาคตะวันออกเฉียงเหนือตั้งแต่ปี 2548 - 2558')`
+![609f1789a2e75dbbf2a6836977abd1b4.png](https://www.img.in.th/images/609f1789a2e75dbbf2a6836977abd1b4.png)
+
+`plot_location(2, 'magenta', u'ข้อมูลน้ำฝนของภาคกลางตั้งแต่ปี 2548 - 2558')`
+![be4ab453e346894a7f65031d7b6abd39.png](https://www.img.in.th/images/be4ab453e346894a7f65031d7b6abd39.png)
+
+`plot_location(3, 'lawngreen', u'ข้อมูลน้ำฝนของภาคตะวันตกตั้งแต่ปี 2548 - 2558')`
+![ef094f91e25f678d0de1383bbb58da66.png](https://www.img.in.th/images/ef094f91e25f678d0de1383bbb58da66.png)
+
+`plot_location(2, 'magenta', u'ข้อมูลน้ำฝนของภาคใต้ฝั่งตะวันตกตั้งแต่ปี 2548 - 2558')`
+![6f31c61e9dce2a3257929cd8329dcc15.png](https://www.img.in.th/images/6f31c61e9dce2a3257929cd8329dcc15.png)
+
+`plot_location(5, 'lightskyblue', u'ข้อมูลน้ำฝนของภาคใต้ฝั่งตะวันออกตั้งแต่ปี 2548 - 2558')`
+![4f9454c77ab339c8d448a59dc2a696b3.png](https://www.img.in.th/images/4f9454c77ab339c8d448a59dc2a696b3.png)
