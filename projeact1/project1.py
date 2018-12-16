@@ -64,6 +64,40 @@ def location(count):
     reader = csv.reader(url)
     return [float(i[count]) for i in reader]
 
+def plot_location_2558():
+    """กราฟเส้นของแต่ละภาค"""
+    url = open(r'2548-2558.csv')
+    reader = list(csv.reader(url))
+    data_year = [float(i) for i in reader[-1][1:]]
+    color = ['c', 'green', 'magenta', 'coral', 'royalblue', 'lightskyblue']
+    region = ["northern", "northeastern", "central", "western", "southwestern", "southeastern"]
+    plt.bar(region, data_year[:-1], color=color, width=0.5)
+    plt.plot(region, [data_year[-1]]*6, 'r--')
+    plt.title(u'กราฟข้อมูลปริมาณน้ำฝนในปี พ.ศ. 2558', fontname='JasmineUPC', fontsize='20')
+    plt.xlabel(u'ภูมิภาค', fontname='JasmineUPC', fontsize='20')
+    plt.ylabel(u'ปริมาณน้ำฝน(มม.)', fontname='JasmineUPC', fontsize='20')
+    plt.text(region[0], data_year[-1]+15, u'average is = %.2f mm' %data_year[-1])
+    plt.grid(axis='y', alpha=0.75)
+    plt.show()
+    
+def plot_region_rank():
+    """กราฟเส้นของแต่ละภาค"""
+    region = ["northern", "northeastern", "central", "western", "southwestern", "southeastern"]
+    dct_average, dct_color = {}, {}
+    color = ['c', 'green', 'magenta', 'coral', 'royalblue', 'lightskyblue']
+    for i in range(1, 7):
+        result = np.average(location(i))
+        dct_average[region[i-1]] = result
+        dct_color[color[i-1]] = result
+    region.sort(key=lambda x: dct_average[x])
+    color.sort(key=lambda x: dct_color[x])
+    rain = [dct_average[i] for i in region]
+    plt.bar(region, rain, color=color, width=0.5)
+    plt.title(u'กราฟเรียงลำดับภูมิภาคจากระดับน้ำฝนเฉลี่ยทั้งหมดจากน้อยไปมาก', fontname='JasmineUPC', fontsize='20')
+    plt.xlabel(u'ภูมิภาค', fontname='JasmineUPC', fontsize='20')
+    plt.ylabel(u'ปริมาณน้ำฝน(มม.)', fontname='JasmineUPC', fontsize='20')
+    plt.show()
+
 """
 ส่วนของกราฟข้อมูลปริมาณน้ำฝนรวมรายปี ตั้งแต่ พ.ศ. 2524 - 2558
 ทั้งหมด 35 ปี ในฟังก์ชั่น plot_all()
