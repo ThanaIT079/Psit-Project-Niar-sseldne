@@ -90,10 +90,10 @@ def plot_location_all():
 `plot_location(2, 'magenta', u'ข้อมูลน้ำฝนของภาคกลางตั้งแต่ปี 2548 - 2558')`
 ![be4ab453e346894a7f65031d7b6abd39.png](https://www.img.in.th/images/be4ab453e346894a7f65031d7b6abd39.png)
 
-`plot_location(3, 'lawngreen', u'ข้อมูลน้ำฝนของภาคตะวันตกตั้งแต่ปี 2548 - 2558')`
+`plot_location(3, 'coral', u'ข้อมูลน้ำฝนของภาคตะวันตกตั้งแต่ปี 2548 - 2558')`
 ![ef094f91e25f678d0de1383bbb58da66.png](https://www.img.in.th/images/ef094f91e25f678d0de1383bbb58da66.png)
 
-`plot_location(2, 'magenta', u'ข้อมูลน้ำฝนของภาคใต้ฝั่งตะวันตกตั้งแต่ปี 2548 - 2558')`
+`plot_location(4, 'royalblue', u'ข้อมูลน้ำฝนของภาคใต้ฝั่งตะวันตกตั้งแต่ปี 2548 - 2558')`
 ![6f31c61e9dce2a3257929cd8329dcc15.png](https://www.img.in.th/images/6f31c61e9dce2a3257929cd8329dcc15.png)
 
 `plot_location(5, 'lightskyblue', u'ข้อมูลน้ำฝนของภาคใต้ฝั่งตะวันออกตั้งแต่ปี 2548 - 2558')`
