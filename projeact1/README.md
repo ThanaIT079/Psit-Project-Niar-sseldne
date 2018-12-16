@@ -17,7 +17,6 @@
 
 ```
 def location(count):
-    """อ่านข้อมูลแล้วส่งข้อมูลเป็น list ของแต่ละภาค"""
     url = open(r'2548-2558.csv')
     reader = csv.reader(url)
     return [float(i[count]) for i in reader]
@@ -27,7 +26,6 @@ def location(count):
 
 ```
 def plot_all():
-    """ดึงข้อมูลน้ำฝนและแสดงผลเป็นกราฟ"""
     url = open(r'2524-2558.csv')
     reader = csv.reader(url)
     x = np.arange(2524, 2559)
@@ -62,7 +60,6 @@ def plot_location(index, color, locate):
 
 ```
 def plot_location_all():
-    """กราฟเส้นของรวมทุกภาค"""
     year = np.arange(2548, 2559)
     color = ['c', 'green', 'magenta', 'coral', 'royalblue', 'lightskyblue', "gray"]
     region = ["northern", "northeastern", "central", "western", "southwestern", "southeastern", "average"]
@@ -75,6 +72,45 @@ def plot_location_all():
     plt.legend()
     plt.title(u'กราฟรวมปริมาณน้ำฝนทุกภาคในประเทศไทย ตั้งแต่ปี พ.ศ. 2548 - 2558', fontname='JasmineUPC', fontsize='20')
     plt.xlabel(u'ปี พ.ศ.', fontname='JasmineUPC', fontsize='20')
+    plt.ylabel(u'ปริมาณน้ำฝน(มม.)', fontname='JasmineUPC', fontsize='20')
+    plt.show()
+```
+## ฟังก์ชั่นกราฟปริมาณน้ำฝนภูมิภาคปี พ.ศ. 2558
+
+```
+def plot_location_2558():
+    url = open(r'2548-2558.csv')
+    reader = list(csv.reader(url))
+    data_year = [float(i) for i in reader[-1][1:]]
+    color = ['c', 'green', 'magenta', 'coral', 'royalblue', 'lightskyblue']
+    region = ["northern", "northeastern", "central", "western", "southwestern", "southeastern"]
+    plt.bar(region, data_year[:-1], color=color, width=0.5)
+    plt.plot(region, [data_year[-1]]*6, 'r--')
+    plt.title(u'กราฟข้อมูลปริมาณน้ำฝนในปี พ.ศ. 2558', fontname='JasmineUPC', fontsize='20')
+    plt.xlabel(u'ภูมิภาค', fontname='JasmineUPC', fontsize='20')
+    plt.ylabel(u'ปริมาณน้ำฝน(มม.)', fontname='JasmineUPC', fontsize='20')
+    plt.text(region[0], data_year[-1]+15, u'average is = %.2f mm' %data_year[-1])
+    plt.grid(axis='y', alpha=0.75)
+    plt.show()
+```
+
+## ฟังก์ชั่นกราฟเรียงปริมาณน้ำฝนภูมิภาคจากน้อยไปมาก พ.ศ. 2524 - 2558
+
+```
+def plot_region_rank():
+    region = ["northern", "northeastern", "central", "western", "southwestern", "southeastern"]
+    dct_average, dct_color = {}, {}
+    color = ['c', 'green', 'magenta', 'coral', 'royalblue', 'lightskyblue']
+    for i in range(1, 7):
+        result = np.average(location(i))
+        dct_average[region[i-1]] = result
+        dct_color[color[i-1]] = result
+    region.sort(key=lambda x: dct_average[x])
+    color.sort(key=lambda x: dct_color[x])
+    rain = [dct_average[i] for i in region]
+    plt.bar(region, rain, color=color, width=0.5)
+    plt.title(u'กราฟเรียงลำดับภูมิภาคจากระดับน้ำฝนเฉลี่ยทั้งหมดจากน้อยไปมาก', fontname='JasmineUPC', fontsize='20')
+    plt.xlabel(u'ภูมิภาค', fontname='JasmineUPC', fontsize='20')
     plt.ylabel(u'ปริมาณน้ำฝน(มม.)', fontname='JasmineUPC', fontsize='20')
     plt.show()
 ```
@@ -103,3 +139,9 @@ def plot_location_all():
 
 `plot_location_all()`
 ![978fcbf17811ed57b819e2a11dc454cb.png](https://www.img.in.th/images/978fcbf17811ed57b819e2a11dc454cb.png)
+
+`plot_location_2558()`
+![17af7a4d91239e22bd95f6c8a7ce0d71.png](https://www.img.in.th/images/17af7a4d91239e22bd95f6c8a7ce0d71.png)
+
+`plot_region_rank()`
+![f695c46856f51e73eb4e88f3b5cd1964.png](https://www.img.in.th/images/f695c46856f51e73eb4e88f3b5cd1964.png)
