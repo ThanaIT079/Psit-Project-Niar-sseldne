@@ -98,3 +98,6 @@ def plot_location_all():
 
 `plot_location(5, 'lightskyblue', u'ข้อมูลน้ำฝนของภาคใต้ฝั่งตะวันออกตั้งแต่ปี 2548 - 2558')`
 ![4f9454c77ab339c8d448a59dc2a696b3.png](https://www.img.in.th/images/4f9454c77ab339c8d448a59dc2a696b3.png)
+
+`plot_location_all()`
+![978fcbf17811ed57b819e2a11dc454cb.png](https://www.img.in.th/images/978fcbf17811ed57b819e2a11dc454cb.png)
