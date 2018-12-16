@@ -16,8 +16,8 @@
 
 ## Libraries and Modules
  - csv
- - matplotlib.pyplot
- - numpy
+ - matplotlib.pyplot 3.0.2
+ - numpy 1.15.4
 
 ## Output
  - ดึงข้อมูลจากไฟล์ .csv มาประมวลผลเเละเก็บข้อมูลลงใน list
