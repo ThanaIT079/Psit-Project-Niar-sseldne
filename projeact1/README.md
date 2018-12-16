@@ -81,7 +81,7 @@ def plot_location_all():
 
 # OUTPUT
 `plot_all()`
-![alt text](https://www.img.in.th/images/246e52cdd5d0dfd6510de4d1fa3eaaef.png)
+![f41e701ea08fd752e0e5d090323073f8.png](https://www.img.in.th/images/f41e701ea08fd752e0e5d090323073f8.png)
 
 `plot_location(0, 'c', u'ข้อมูลน้ำฝนของภาคเหนือตั้งแต่ปี 2548 - 2558')`
 ![24f761eb4131573afede6bc40fb08078.png](https://www.img.in.th/images/24f761eb4131573afede6bc40fb08078.png)
