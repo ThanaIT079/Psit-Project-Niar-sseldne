@@ -1,5 +1,6 @@
 # update
 - ฟังก์ชั่นดึงข้อมูลไฟล์ '.csv' และเลือกข้อมูลน้ำฝนระบุภูมิภาค ตั้งแต่ พ.ศ. 2548 - 2558
+- ฟังก์ชั่นระบุตัวเลขค่าปริมาณน้ำฝน
 - ฟังก์ชั่นกราฟปริมาณน้ำฝนเฉลี่ยต่อปีตั้งแต่ พ.ศ. 2524 - 2558
 - ฟังก์ชั่นกราฟปริมาณน้ำฝนแบบแยกภูมิภาคเทียบกับค่าเฉลี่ยในปีนั้นๆตั้งแต่ พ.ศ. 2548 - 2558
 - ฟังก์ชั่นกราฟปริมาณน้ำฝนแบบทุกภาคเทียบค่าเฉลี่ยนปีนั้นๆตั้งแต่ พ.ศ. 2548 - 2558
@@ -22,6 +23,20 @@ def location(count):
     url = open(r'2548-2558.csv')
     reader = csv.reader(url)
     return [float(i[count]) for i in reader]
+```
+
+## ฟังก์ชั่นระบุตัวเลขปริมาณน้ำฝน
+
+```
+def add_text(var_x, var_y, count1, count2):
+    """เพิ่มตัวเลข"""
+    for i in range(len(var_x)):
+        rain = '%.2f' %var_y[i]
+        rain = rain.rstrip("0")
+        if i != 1:
+            plt.text(var_x[i], var_y[i]+count1, u'%s' %rain, fontsize=24, style='oblique', ha='center', fontname='EucrosiaUPC')
+        else:
+            plt.text(var_x[i], var_y[i]+count2, u'%s' %rain, fontsize=24, style='oblique', ha='center', fontname='EucrosiaUPC')
 ```
 
 ## ฟังก์ชั่นกราฟปริมาณน้ำฝนเฉลี่ยต่อปีตั้งแต่ พ.ศ. 2524 - 2558
@@ -143,7 +158,7 @@ def plot_region_rank():
 ![978fcbf17811ed57b819e2a11dc454cb.png](https://www.img.in.th/images/978fcbf17811ed57b819e2a11dc454cb.png)
 
 `plot_location_2558()`
-![17af7a4d91239e22bd95f6c8a7ce0d71.png](https://www.img.in.th/images/17af7a4d91239e22bd95f6c8a7ce0d71.png)
+![f71bcba6cc958cde02b78cfe7b5e5f58.png](https://www.img.in.th/images/f71bcba6cc958cde02b78cfe7b5e5f58.png)
 
 `plot_region_rank()`
-![f695c46856f51e73eb4e88f3b5cd1964.png](https://www.img.in.th/images/f695c46856f51e73eb4e88f3b5cd1964.png)
+![f2bfaebbcd7372ebbf235cc2e17f4728.jpg](https://www.img.in.th/images/f2bfaebbcd7372ebbf235cc2e17f4728.jpg)
