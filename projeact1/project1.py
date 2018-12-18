@@ -19,6 +19,12 @@ def plot_all():
     plt.xlabel(u'ปี พ.ศ.', fontname='JasmineUPC', fontsize='20')
     plt.ylabel(u'ปริมาณน้ำฝน(มม.)', fontname='JasmineUPC', fontsize='20')
     plt.show()
+    color = list(map(lambda x: '#1f77b4' if x >= result else 'r', y))
+    plt.bar(x, y, color=color)
+    plt.plot(x, [result]*len(x), 'r')
+    plt.xticks(x, rotation=45)
+    plt.text(2557, result+4, u'ค่าเฉลี่ยทั้งหมด 1458 มม.', fontname='JasmineUPC', fontsize='20')
+    plt.show()
 
 def plot_location(index, color, locate):
     """
