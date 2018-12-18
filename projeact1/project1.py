@@ -64,6 +64,16 @@ def location(count):
     reader = csv.reader(url)
     return [float(i[count]) for i in reader]
 
+def add_text(var_x, var_y, count1, count2):
+    """เพิ่มตัวเลข"""
+    for i in range(len(var_x)):
+        rain = '%.2f' %var_y[i]
+        rain = rain.rstrip("0")
+        if i != 1:
+            plt.text(var_x[i], var_y[i]+count1, u'%s' %rain, fontsize=24, style='oblique', ha='center', fontname='EucrosiaUPC')
+        else:
+            plt.text(var_x[i], var_y[i]+count2, u'%s' %rain, fontsize=24, style='oblique', ha='center', fontname='EucrosiaUPC')
+
 def plot_location_2558():
     """กราฟเส้นของแต่ละภาค"""
     url = open(r'2548-2558.csv')
@@ -78,6 +88,7 @@ def plot_location_2558():
     plt.ylabel(u'ปริมาณน้ำฝน(มม.)', fontname='JasmineUPC', fontsize='20')
     plt.text(region[0], data_year[-1]+15, u'average is = %.2f mm' %data_year[-1])
     plt.grid(axis='y', alpha=0.75)
+    add_text(region, data_year[:-1], 40, 160)
     plt.show()
     
 def plot_region_rank():
@@ -96,6 +107,7 @@ def plot_region_rank():
     plt.title(u'กราฟเรียงลำดับภูมิภาคจากระดับน้ำฝนเฉลี่ยทั้งหมดจากน้อยไปมาก', fontname='JasmineUPC', fontsize='20')
     plt.xlabel(u'ภูมิภาค', fontname='JasmineUPC', fontsize='20')
     plt.ylabel(u'ปริมาณน้ำฝน(มม.)', fontname='JasmineUPC', fontsize='20')
+    add_text(region, rain, 40, 40)
     plt.show()
 
 """
